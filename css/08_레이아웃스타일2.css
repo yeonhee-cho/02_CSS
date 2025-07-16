@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.title {
+  background-color: steelblue;
+  color: white;
+  padding: 100px 20px 30px;
+
+  /* 
+    요소가 화면을 벗어나면 지정된 위치에 고정
+    화면 스크롤을 내릴 경우 title 내부에 작성된 글자는 보이지 않는 것이 맞음
+    특정 요소를 
+  */
+  position: sticky;
+  top: -70px;
+}
+
+div {
+  border: 1px solid black;
+}
+
+/* 감싸는 요소(태그)의 기준점 */
+.container-1 {
+  width: 340px;
+  height: 304px;
+  border: 2px dashed red;
+  margin: 30px;
+  position: relative;
+}
+.first {
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+  position: absolute;
+}
+.second {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  position: absolute;
+  /*
+    기준이 되는 container-1요소에서 
+    왼쪽 벽으로부터 50px 만큼 떨어진 위치 배치
+    위쪽 벽으로부터 50px 만큼 떨어진 위치 배치
+  */
+  left: 50px;
+  top: 50px;
+  z-index: 10;
+}
+.third {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  /* container-1 기준 div 태그 요소로부터
+  오른쪽 벽에서 100px 정도 떨어지고
+  아래쪽 벽에서 떨어진 위치에 third div 배치*/
+  right: 100px;
+  bottom: 100px;
+  z-index: 15;
+}
+
+.container-2 {
+  width: 486px;
+  height: 272px;
+  position: relative;
+}
+.center {
+  width: 50px;
+  height: 50px;
+  background-color: hotpink;
+
+  /* 테두리를 가장 둥글게 만들어 원형 상태 유지 */
+  border-radius: 50%;
+
+  /* 
+    다른 요소와의 간격을 자동으로 설정 -> 가로에서 가운데 설정 
+
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      container-2 상하좌우 면에 여백을 하나도 주지 않고 딱 붙어 있겠다는 의미
+
+      내부요소(태그)는 위치 설정을 할 수 없으므로 가장 기본인 왼쪽 위에 TODO
+
+      margin : autol
+      가운데 정렬을 할 수 있는 핵심
+      top-bottom left-right 가 모두 공평하게 설정되어 있고, 
+      설정에서 여백을 자동으로 조정할 수 있도록 속성을 넣어주면 
+      자동으로 남은 공간을 양쪽에 똑같이 분배해서 
+      요소를 정중앙에 위치시킴
+  */
+  margin: auto; /* 이게 없으면 가운데로 안 감!*/
+
+  /* 
+    margin: auto + position:absolute + top:0 + bottom:0 + right:0 + left:0
+    가로,세로, 모두 중앙 정렬을 하는 고전적인 css 가운데 정렬 기법 
+  */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-area {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: white;
+}
+
+a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  /* 장평 설정 : 세로에서 폭 설정 */
+  line-height: 35px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  /* 사용자가 드래그를 하지 못하도록 방지 */
+  user-select: none;
+}

@@ -1,0 +1,78 @@
+body {
+  margin: 0px;
+}
+
+.title {
+  background-color: #ff7043;
+  font-size: 28px;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+.nav {
+  margin: 10px auto;
+}
+
+/* nav클래스 내부에 존재하는 a태그만 스타일 적용 */
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #d84315;
+}
+
+.box {
+  background-color: #ffe0b2;
+  padding: 20px;
+  border: 5px solid #ff7043;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.pizza-list {
+  /* 피자리스트 div 내부에 
+    피자아이템이라는 div가 여러가지 있음
+    div 들을 정렬할 때는 맨 바깥에 flex
+    display: flex; 작성해서 가로로 정렬하는 방법
+    */
+  display: flex;
+  justify-content: center;
+}
+
+.pizza-item {
+  width: 250px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: 3px solid #ffa726;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.footer {
+  background-color: #ffccbc;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.pizza-top {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: pink;
+  padding: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  z-index: 5; /*999를 최대값으로 줌*/
+}
