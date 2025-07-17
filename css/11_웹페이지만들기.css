@@ -62,12 +62,15 @@
 }
 
 .banner {
-  background-image: url("../images/banner.png");
-  background-size: cover;
+  background-image: url("../images/banner1.png");
+  background-size: auto 145%;
+  background-repeat: no-repeat; /* 배경 이미지를 반복하지 않겠다 */
+  /* contain -> 이미지 사이즈가 기기 너비만큼 복제 */
   background-position: center;
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
   position: relative;
 }
@@ -79,4 +82,24 @@
   transform: translate(-50%, -50%);
   color: #333;
   text-align: center;
+  box-shadow: 2px;
+}
+
+.banner-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  /* 
+    box-shadow나 text-shadow는 동일한 특성을 지님
+    box-shadow 무언가가 담겨진 테두리의 음영을 줄 때 사용
+    text-shadow 글자 테두리 음영을 줄 때 사용
+    오른쪽으로 얼마나 이동할 것인가,  아래쪽으로 얼마나 이동할 것인가,  그림자 흐림 정도,  80% 불투명한 흰색 
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); 
+    rgba(255 = 빨간색, 255 = 초록색, 255 = 파란색, 불투명한 정도(0.1로 갈수록 투명해져서 그림자가 안보이고 0.9로 갈수록 선명해져서 그림자가 뚜렷하다)
+
+    왼쪽 , 오른쪽, 선명하게 0 = 검정계열
+    text-shadow: -20px -20px 0px rgba(0, 0, 0, 1);
+    rgba(0, 0, 0, 1); // 검정
+    rgba(255, 255, 255, 1); / 흰색
+  */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
