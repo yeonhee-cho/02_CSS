@@ -11,7 +11,7 @@
   /* 
     display: flex를 작성했을 때 
     기본값이 row 왼쪽에서 부터 오른쪽 열의 정렬인 것이 마음에 들지 않는다면
-    flex-direction를 이용하여 //TODO 수 있다.
+    flex-direction를 이용해서 display:flex 정렬 기준을 변경할 수 있다.
     flex-direction : 중심축의 방향 기본값 row
     row(기본값) : 가로 (왼 -> 오)
     row-reverse : 가로(오 -> 왼)

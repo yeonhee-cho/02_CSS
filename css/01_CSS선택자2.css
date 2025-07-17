@@ -202,7 +202,8 @@ p[data="data-2"] {
         background-size: cover;
     }
 
-    만약에 // TODO
+    만약에 빈 네모창에서 개발자가 넣고자하는 체크가 된 박스 이미지를
+    표시하기를 원한다면 check:checked를 사용해주는 것이 좋음
 */
 #check:checked + label {
   background-image: url("../images/checkbox.png");
