@@ -51,12 +51,86 @@
         div {
           text-align: center;
           텍스트 가운데 정렬
+          margin-top: 48px;  mt-5
+          margin-bottom: 4px; mb-1
         }
       </style> -->
       <!-- 본문 위치 -->
       <div class="mt-5 text-center">
         <h2>우리의 서비스</h2>
         <p>다양한 분야에서 전문적인 서비스를 제공합니다.</p>
+      </div>
+      <style>
+        .box {
+          background-color: lightblue;
+        }
+      </style>
+      <!-- 
+        row 한 줄에서
+        col 한 행을 사용하면
+        모든 박스가 동일한 너비로 한 줄에 배치
+        기기 가로 사이즈가 줄어서 더이상 한 줄에 담을 수 없을 때까지
+      -->
+      <div class="row">
+        <div class="col-6 box">박스1</div>
+        <div class="col-3 box">박스2</div>
+        <div class="col-3 box">박스3</div>
+        <div class="col box">박스4</div>
+        <div class="col box">박스5</div>
+        <div class="col box">박스6</div>
+        <div class="col box">박스1</div>
+        <div class="col box">박스2</div>
+        <div class="col box">박스3</div>
+        <div class="col box">박스4</div>
+        <div class="col box">박스5</div>
+        <div class="col box">박스6</div>
+      </div>
+
+      <!-- 
+        아래에 row 클래스를 만들고 
+        col-2를 이용해서 한 줄에 div가 모두 꽉차도록 
+        div를 만들어주기      
+      -->
+      <div class="row">
+        <div class="col-2">박스1</div>
+        <div class="col-2">박스2</div>
+        <div class="col-2">박스3</div>
+        <div class="col-2">박스4</div>
+        <div class="col-2">박스5</div>
+        <div class="col-2">박스6</div>
+      </div>
+
+      <!-- 
+        아래에 row 클래스를 만들고 
+        col-3를 이용해서 한 줄에 div가 모두 꽉차도록 
+        div를 만들어주기  
+        <style>태그를 이용해서 
+        .box1를 만들고 디자인 속성 적용하기
+        적용할 디자인 속성
+        1. 배경색 lightpink(홀수영역)
+                 lightblue(짝수영역)
+        2. 실선 1px solid black
+        3. 모서리 둥글기 10px
+        4. 박스쉐도우 오른쪽 5 아래 8 설정하고 0.4 색상지정 rgba(0,0,0,0.8)
+      -->
+      <style>
+        .box1 {
+          border: 1px solid black;
+          border-radius: 10px;
+          box-shadow: 5px 8px 0.4px rgba(0, 0, 0, 0.8);
+        }
+        .box1:nth-child(2n) {
+          background-color: lightblue;
+        }
+        .box1:nth-child(2n-1) {
+          background-color: lightpink;
+        }
+      </style>
+      <div class="row">
+        <div class="col-3 box1">박스1</div>
+        <div class="col-3 box1">박스2</div>
+        <div class="col-3 box1">박스3</div>
+        <div class="col-3 box1">박스4</div>
       </div>
     </div>
 
