@@ -19,4 +19,10 @@
     column-reverse : 세로(아래 -> 위)
   */
   flex-direction: column-reverse;
+
+  /* --------- justify-content ---------- */
+  /* 중심축 방향 item 정렬(기본값 : flex-start) */
+
+  /* justify-content: flex-start; */
+  justify-content: space-evenly;
 }
