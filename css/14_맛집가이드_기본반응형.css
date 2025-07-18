@@ -85,7 +85,7 @@ p {
         grid-template-columns
         
         repeat(auto-fit, minmax(300px, 1fr))
-        repeat() : 컬럼을 반복해서 만들기( 행 = 세로 )
+        repeat() : 컬럼을 반복해서 만들기( 행 = 가로 )
         auto-fit : 화면 크기에 맞춰서 자동으로 컬럼 개수 조절
         minmax(300px, 1fr) : 각 행(컬럼)의 최소 너비는 300px
                              남은 공간을 균등하게 나눠가지겠다.
