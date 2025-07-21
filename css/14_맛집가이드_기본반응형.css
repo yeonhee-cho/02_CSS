@@ -277,6 +277,100 @@ a {
   background-color: #5a6268;
 }
 
+/* ------- 맛집 가이드 각 메뉴 상세페이지 스타일 -------- */
+.menu-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-detail .menu-img {
+  /* 
+    배경색 실선 그라디언트
+    135도 #fff8e1 0% 시작 #ffe0b2 100%로 준다
+    패딩 30
+    모서리테두리 15
+    실선 2px solid #ffcc02
+    여백 아래 30
+  */
+  background: linear-gradient(132deg, #fff8e1 0%, #ffe0b2 100%);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ffcc02;
+  margin-bottom: 20px;
+}
+
+.menu-detail .menu-img h3 {
+  color: #d54315;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.price {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 25px 0;
+  border: 2px solid #ff6b6b;
+}
+
+.price h5 {
+  font-size: 30px;
+  color: #d32f3f;
+}
+
+.price p {
+  font-size: 18px;
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ingredient-list .ingredient-item {
+  background-color: #4caf50;
+  /*
+    글자색 #fff
+    패딩 8 16
+    모서리 20
+    박스그림자 오른쪽 이동 없음 아래 2 번짐효과 4 rgba(검정기준 0.2 만큼 불투명하게) 설정
+  */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.order-list {
+  display: grid;
+  /* 
+    그리드 템플릿 컬럼즈를 이용해서 반복, 
+    3개씩 정렬 반복 1fr 간격 만큼 설정
+
+    갭사이즈 20
+  */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.order-list .order-item {
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.order-list .order-item:hover {
+  border-color: #ff6b6b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 /* 태블릿 반응형 768px */
 @media (max-width: 768px) {
   .container {
