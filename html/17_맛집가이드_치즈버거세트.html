@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
   </head>
   <body>
+    <style>
+      /* TODO 
+      색상 테마
+      - 메인 색상: `#ff6b6b` (빨간색 계열)
+      - 배경 그라데이션: `linear-gradient(45deg, #ff6b6b, #4ecdc4)` (빨강-청록)
+      - 버튼 호버: `#ff5252`
+
+      반응형 디자인
+      - 데스크톱: 2열 레이아웃
+      - 태블릿 (768px 이하): 1열 레이아웃, 네비게이션 줄바꿈
+      - 모바일 (460px 이하): 세로 네비게이션, 전체 너비 버튼 
+      */
+
+      /* .order-btn {
+        border: none;
+        color: #ff6b6b;
+        background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      }
+
+      .order-btn:hover {
+        color: #ff5252;
+      } */
+    </style>
     <div class="container">
       <h1>🍔 맛집 리스트 - 치즈버거 세트</h1>
       <p>수제 패티와 신선한 야채가 만나는 완벽한 조화</p>
@@ -24,12 +47,59 @@
       <div class="menu-detail">
         <!-- 메뉴 이미지 추후 추가 -->
         <div class="menu-img">
+          🍔
           <h3>치즈버거 세트</h3>
           <p>
             미국 전통의 클래식 치즈버거와 바삭한 감자튀김, 시원한 콜라까지
             포함된 완벽한 세트메뉴입니다.
           </p>
         </div>
+
+        <div class="price-info">
+          <div class="price">₩ 15,000</div>
+          <div class="rating">
+            <div class="stars">⭐⭐⭐⭐☆</div>
+            <span>(4.5/5.0)</span>
+          </div>
+        </div>
+
+        <div class="ingredient-list">
+          <span class="ingredient-item">수제 패티</span>
+          <span class="ingredient-item">체다 치즈</span>
+          <span class="ingredient-item">양상추</span>
+          <span class="ingredient-item">토마토</span>
+          <span class="ingredient-item">양파</span>
+          <span class="ingredient-item">피클</span>
+          <span class="ingredient-item">특제 소스</span>
+          <span class="ingredient-item">브리오슈 번</span>
+          <span class="ingredient-item">감자튀김</span>
+          <span class="ingredient-item">콜라</span>
+        </div>
+
+        <div class="order-list">
+          <div class="order-item">
+            <strong>기본 세트 (버거 + 감자튀김 + 콜라)</strong>
+            <p>₩ 15,000</p>
+          </div>
+          <div class="order-item">
+            <strong>디럭스 세트 (버거 + 감자튀김 + 어니언링 + 콜라)</strong>
+            <p>₩ 18,000</p>
+          </div>
+          <div class="order-item">
+            <strong>라지 세트 (더블패티 + 감자튀김 + 콜라)</strong>
+            <p>₩ 20,000</p>
+          </div>
+        </div>
+        <button class="order-btn" type="button">주문하기</button>
+
+        <ul class="store-list">
+          <li class="store-item">매장명: 버거킹덤 강남점</li>
+          <li class="store-item">주소: 서울시 강남구 버거로 456</li>
+          <li class="store-item">전화번호: 02-5678-9012</li>
+          <li class="store-item">영업시간: 10:00 - 23:00 (연중무휴)</li>
+          <li class="store-item">배달 시간: 25-35분</li>
+          <li class="store-item">최소 주문 금액: 12,000원</li>
+        </ul>
       </div>
     </div>
   </body>
