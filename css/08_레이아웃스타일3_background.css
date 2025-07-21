@@ -1,0 +1,44 @@
+body {
+  max-width: 900px; /* 0 ~ 900px 까지의 범위 설정 */
+  margin: 0 auto; /* 상하 = 0 좌우 = 자동 여백 설정 */
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+h1 {
+  color: #333; /* 맨 아래 color 속성으로 흰색을 작성했기 때문에 #333은 적용되지 않는다. */
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: #fff;
+}
+
+/*
+    pre 태그에 
+    배경색상 #2d3748
+    글자색상 #e2e8f0
+    패딩 상하좌우 15
+    모서리 둥글기 정도 8
+    글자크기 14
+
+    p 태그
+    배경색상 흰색
+    패딩 15
+    모서리 둥글기 5
+    박스 쉐도우 오른쪽 이동없음 아래로 이동 2 번짐 5 rgba(0,0,0,0.1)
+*/
+
+pre {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+p {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
