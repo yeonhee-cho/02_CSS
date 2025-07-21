@@ -406,7 +406,7 @@ a {
     font-size: 32px;
   }
 
-  /* TODO 네비게이션을 모바일에서 확인했을 때 햄버거 버튼 생성 */
+  /*  네비게이션을 모바일에서 확인했을 때 토글형태로 확인할 수 있다.  */
   .hamburger {
     display: block;
   }
@@ -414,6 +414,11 @@ a {
   .nav {
     flex-wrap: wrap;
     gap: 10px;
+    display: none;
+  }
+  .nav.show {
+    display: flex;
+    flex-direction: column;
   }
 
   .nav a {
