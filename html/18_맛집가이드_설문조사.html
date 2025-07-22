@@ -30,10 +30,10 @@
       -->
       <form action="#">
         <!-- 기본정보 -->
-        <fieldset>
+        <fieldset class="input-field">
           <legend>기본 정보</legend>
           <label>
-            이름 :
+            이름:
             <!-- 
                 class = css 스타일을 꾸며줄 때 사용하는 명칭
                 id = 자바스크립트 기능 연결할 때 사용하는 명칭 
@@ -74,7 +74,8 @@
                 placeholder = input 내부에 어떠한 값을 작성해주어야 하는지 알려주는 알림 값
                 
                 input 의 경우 주관식처럼 소비자가 작성한 value 값을 가져오기 때문에 기본적으로 value를 작성하지 않지만
-                checkbox나 radio처럼 객관식으로 개발자가 지정한 범위 내에서 소비자가 // TODO
+                checkbox나 radio처럼 객관식으로 개발자가 지정한 범위 내에서 
+                  소비자가 값을 설정할 경우에는 value 값을 개발자가 지정해주어야 함
             -->
             <input
               id="userphone"
@@ -83,7 +84,8 @@
             />
           </label>
         </fieldset>
-        <fieldset>
+        <!-- 체크박스 -->
+        <fieldset class="choice-field">
           <legend>음식 선호도</legend>
           <p>좋아하는 음식 종류(복수 선택 가능 : )</p>
 
@@ -116,23 +118,18 @@
             주 1 ~ 2회
           </label>
         </fieldset>
-
         <!-- 
             맛집 이미지 html 코드를 작성할 때 
             어디서부터 어디까지 어떤 코드를 작성했는지 표기
         -->
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 사진 1</legend>
           <!-- 
             현재 컴퓨터에서 이미지 파일 가져오기
             alt 시각적으로 보이지 않는 분들을 위해서 이미지가 무엇인지 알려주는 설명,
                 이미지가 보이지 않을 때 어떤 이미지의 위치인지 알려줌 
           -->
-          <img
-            style="width: 200px"
-            src="../images/pizza/감자피자.png"
-            alt="감자피자"
-          />
+          <img src="../images/pizza/감자피자.png" alt="감자피자" />
           <p>위 음식이 맛있어 보이나요?</p>
           <label>
             <input type="radio" id="yes" name="looks1" value="yes" />
@@ -143,10 +140,9 @@
             아니요, 별로에요.
           </label>
         </fieldset>
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 사진 2</legend>
           <img
-            style="width: 200px"
             src="https://www.chosun.com/resizer/v2/IFHDK4JPAZF6XMM5NBNRUDTSBE.jpg?auth=b971ded640b7ce051faf26521a10082b2a96ddac5f0061748ae3b7c673f08235&width=500&height=480&smart=true"
             alt="비빔밥"
           />
@@ -162,7 +158,7 @@
         </fieldset>
         <!-- 유튜브 영상 -->
         <!-- 이모지 window + . -->
-        <fieldset>
+        <fieldset class="choice-field">
           <legend>맛집 소개 영상</legend>
           <p>유명한 맛집 리뷰 영상을 시청해보세요 :</p>
           <!-- width, height, title ok!! -->
@@ -185,7 +181,8 @@
             도움안됨👎
           </label>
         </fieldset>
-        <fieldset>
+        <!-- 지도 -->
+        <fieldset class="choice-field">
           <legend>맛집 위치</legend>
           <p>서울 맛집 밀집 지역 - 종각역 주변 :</p>
           <iframe
