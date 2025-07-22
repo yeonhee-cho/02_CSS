@@ -1,0 +1,116 @@
+/* -------- custom1 -------- */
+/*
+ link 태그로 css 확장자 파일을 가져오는 것과 순위가 동일
+ style 태그로 html 내부에 스타일을 작성하는 것은 css순위에 크게 영향을 미치지 않음
+*/
+.custom {
+  cursor: pointer;
+  display: inline-flex;
+  /* 
+    <label class="custom">
+      <input type="checkbox" />
+      <span class="checkbox-icon"></span>
+      <span>초록배경 + 파란색 체크박스</span>
+    </label>
+    
+    display: inline-flex;
+    -> inline 내에 나란히 배치하도록 설정
+
+    flex  custom label 태그 내부에 존재하는 
+          input 태그랑 span 태그를 나란히 배치
+  */
+  /* 
+    position: relative; // label 태그 내부에서 기준점이 됨(중심지 역할)
+
+    .custom input:checked + .checkbox-icon::after  // +는 custom 클래스가 작성된 inpur이 :checked(체크된) 상태일 때 그 바로 다음 뒤에 오는 .checkbox-icon의 가상요소 선택
+    {
+        content: "";
+        border: solid #2196f3; // 실선 테두리
+        border-width: 0 3px 3px 0; // 위 오른쪽 아래 왼쪽 순서로 체크 모양 만들기, 위랑 왼쪽 테두리 없애기하여 ㄴ자 누운 모양을 만든 것
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        width: 6px;
+        height: 12px;
+        transform: rotate(45deg); // 시게 방향으로 45도 회전
+    }
+
+  */
+}
+
+.custom input {
+  display: none;
+}
+
+.custom .checkbox-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #4caf50;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* 체크 마크 만들기 */
+.custom input:checked + .checkbox-icon::after {
+  content: "";
+  border: solid #2196f3;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  transform: rotate(45deg);
+}
+
+/* ------ custom2 ------ */
+.custom2 {
+  display: inline-flex;
+  cursor: pointer;
+}
+.custom2 input {
+  display: none;
+}
+
+.custom2 i {
+  width: 24px;
+  height: 24px;
+  background-color: orange;
+  border-radius: 4px;
+  display: flex; /* 기본정렬 */
+  align-items: center; /* 세로에서 가운데 */
+  justify-content: center; /* 가로에서 가운데 */
+}
+
+/* 체크 됐을 때 스타일 */
+.custom2 input:checked + i {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.custom3 {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.custom3 input {
+  display: none;
+}
+
+.custom3 i {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid orange;
+  background-color: #fff;
+  color: orange;
+}
+
+.custom3 input:checked + i {
+  border-color: lightblue;
+  background-color: lightblue;
+  color: blue;
+}

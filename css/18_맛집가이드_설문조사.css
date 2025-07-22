@@ -99,12 +99,14 @@ form > .input-field > label > input:focus {
 .choice-field > label > input {
   /* 
     accent-color : 체크된 체크박스 내부 색상을 변경
-    체크된 체크표시의 색상 변경
+    체크된 체크표시의 색상 변경할 경우
+    font awesome 이나 외부에서 작성한 svg 폰트, icon을 사용해서 // TODO
   */
   accent-color: #ff6b6b;
 }
 
-.choice-field > label > input:checked {
+.choice-field > label > input:checked + .choice-field > label > input:after {
+  content: "ㅎ";
   /* 
     기존에 input에서 주었던 accent 색상이나 
     이외 모든 색상을 반전 형태로 제공
